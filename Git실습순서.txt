@@ -1,0 +1,36 @@
+
+바탕화면 git bash 실행
+git config --list
+git config user.name
+git config --global user.name <github-name>
+
+git config user.email
+git config --global user.email <email>
+
+git config 한눈에 보기
+cat ~/.gitconfig
+
+cd <work-dir>
+
+git init
+.gitignore 파일 작성
+
+git add --all
+
+git add <파일명> 또는 git add .
+
+git commit -am "first commit message"햣
+
+git remote add origin <git-remote-url>
+
+git push -u origin master (집에서 할 때도 이 명령을 사용해야 함)
+
+git clone <https://github repo 주소> (다른 곳에서 접속할 때 모두 복사하여 사용)
+  git branch -a
+  git checkout -t remotes/origin/master (브랜치 clone 하기)
+
+git log
+
+git status
+
+
