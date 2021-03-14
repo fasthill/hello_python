@@ -84,5 +84,10 @@ git checkout -t origin/<branch-name>
 
 #특정 브랜치 pull하기
 git pull origin <branch-name>.  default로 항상 master만 내려옴 따라서 꼭 branch 명시를 해야 함.
+   pull과 download의 차이는 파일들을 비교해달라는 것임.
+   처음으로 생긴 branch를 pull하기 위해서는 git checkout -t origin/<branch-name>을 해야 함.
 
 cf. git push origin <branch-name>
+
+master branch에서
+git merge br1하면, branch br1의 모든 파일이 master로 올라오면서 다른 내용들을 확인시켜줌.
