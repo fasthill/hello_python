@@ -1,0 +1,93 @@
+
+바탕화면 git bash 실행
+git config --list
+git config user.name
+git config --global user.name <github-name>
+
+git config user.email
+git config --global user.email <email>
+
+git config 한눈에 보기
+cat ~/.gitconfig
+
+cd <work-dir>
+
+git init
+.gitignore 파일 작성
+
+git add --all
+
+git add <파일명> 또는 git add .
+
+git commit -am "first commit message"햣
+
+git remote add origin <git-remote-url>
+
+git push -u origin master (집에서 할 때도 이 명령을 사용해야 함)
+
+git clone <https://github repo 주소> (다른 곳에서 접속할 때 모두 복사하여 사용)
+  git branch -a
+  git checkout -t remotes/origin/master (브랜치 clone 하기)
+
+git log
+
+git status
+
+git branch <branch-name> # branch 만들기
+git branch # branch 전체 보기
+git checkout <branch-name> # 전환
+소스 수정 & add & commit
+git push origin <branch-name>
+git log
+ 다른 동료 폴더 > git clone <git-remote-url>
+ or
+ 다른 동료 폴더 > git pull
+
+# 여기서 branch 내용까지 받아지면 성공
+# branch를 작업하는 쪽 외에는 소스 안보임
+
+git checkout master #master로 변경
+git merge <branch-name>
+git branch
+git log
+# conflict (non fast forward)
+git status
+# branch 삭제
+local > git branch -d <branch-name>
+local > git branch
+remote > git push --delete origin <branch-name>
+
+브랜치 생성 및 변경전에 commit 잊지 말기!
+
+git diff <branch-name>
+git diff <branch-name> <file-name>
+git checkout -p <branch-name> <file-name>
+
+#브랜치의 특정파일만 master로 커밋해서 올리기
+git checkout master
+git add <file-name>
+git commit -am "message"
+git push origin master
+
+#서버의 특정 브랜치 가져오기
+git checkout -t origin/<branch-name>
+
+
+#Github Collaborator & folk
+ - collaborators : Repository의 공동 작업자
+    . Settings에 가서 manage Access -> Collaborators에 등록시켜야 함.
+ - fork :  다른 사람의 repository 연결하기
+ (주의 : folk된 repo, 경로는 원본과 다름!!, 나만의 url임) 그래서 clone으로 받아야 함.
+
+#서버의 특징 브랜치 가져오기
+git checkout -t origin/<branch-name>
+
+#특정 브랜치 pull하기
+git pull origin <branch-name>.  default로 항상 master만 내려옴 따라서 꼭 branch 명시를 해야 함.
+   pull과 download의 차이는 파일들을 비교해달라는 것임.
+   처음으로 생긴 branch를 pull하기 위해서는 git checkout -t origin/<branch-name>을 해야 함.
+
+cf. git push origin <branch-name>
+
+master branch에서
+git merge br1하면, branch br1의 모든 파일이 master로 올라오면서 다른 내용들을 확인시켜줌.
