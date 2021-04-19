@@ -5,3 +5,8 @@ python study project 파이썬을 배우는 과정 <br>
 ## title
 * markdown exercise
 * 더 연습 필요
+
+ **why**
+
+
+ [home](https://www.pcu.ac.kr)
